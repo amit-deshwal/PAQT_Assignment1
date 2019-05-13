@@ -1,0 +1,300 @@
+@font-face {
+    font-family: 'folty';
+    src: url('fonts/folty-Thin.otf');
+}
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'folty', Arial, Helvetica, sans-serif;
+     margin: 0;
+     height: 100%;
+     width: 100%;
+     background-image: url("bcg.png");
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+nav {
+    background: white;
+    width: 100%;
+    height: 60px;
+    box-shadow: 1px 7px 9px -3px rgba(194, 186, 194, 1);
+}
+.logo {
+    width: 155px;
+    position: relative;
+    height: 40px;
+    bottom: 0px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+h1{
+    padding: 0%;
+    margin-bottom:0;
+}
+.col-8 {
+    float: left;
+    width: 60.66%;
+    padding: 10px;
+}
+
+.text{
+    font-size: 14px;
+}
+.col-4 {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+button {
+    padding: 20px;
+    color: white;
+    background-color: #28b585;
+    border-color: #28b585;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    letter-spacing: 0.6px;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    box-shadow: 1px 9px 13px 1px rgba(34, 41, 37, 0.3);
+}
+#btn {
+    display: none; 
+    margin-top:60px ;
+    margin-left: 70px;
+    padding:10px;
+}
+
+.col-2 {
+    float: left;
+    width: 16.66%;
+    padding: 10px;
+}
+.mascot{
+  text-decoration:none;
+}
+.allmascots{
+ border-style: solid;border-width: 2px; border-color: rgba(139, 137, 137, 0.699);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.822);
+    font-family: 'Poiret One', cursive;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.text1{
+ font-size: 18px;
+ margin-left: 10%;
+}
+
+
+div.stars {
+    width: 270px;
+    display: inline-block;
+}
+
+input.star {
+    display: none;
+}
+
+label.star {
+    margin-right: 30px;
+    float: right;
+    font-size: 25px;
+    color: #444;
+    transition: all .2s;
+}
+
+input.star:checked~label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+}
+
+
+input.star-5:checked~label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 14px #952;
+}
+
+input.star-1:checked~label.star:before {
+    color: rgb(255, 34, 34);
+}
+input.star-2:checked~label.star:before {
+    color: rgb(255, 34, 34);
+}
+input.star-3:checked~label.star:before {
+    color: rgba(126, 233, 76, 0.76);
+}
+label.star:hover {
+    transform: rotate(-15deg) scale(1.3);
+}
+
+label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+}
+
+.rev-box {
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    transition: all .25s;
+}
+
+input.star:checked~.rev-box {
+    height: 125px;
+    overflow: visible;
+}
+
+#form-details{
+    display: none;
+}
+/* Customize the label (the container) */
+.checkcontainer {
+    display: block;
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    font-family: 'folty', cursive;
+    font-size: 14px;
+}
+
+/* Hide the browser's default checkbox */
+.checkcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 0.1px solid rgba(128, 128, 128, 0.753);
+    background-color: #fcfcfc;
+}
+
+/* On mouse-over, add a grey background color */
+.checkcontainer:hover input~.checkmark {
+    background-color: #000000;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkcontainer input:checked~.checkmark {
+    background-color: #ffffff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkcontainer input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkcontainer .checkmark:after {
+    left: 6px;
+    top: 0px;
+    width: 4px;
+    height: 14px;
+    bottom: 8px;
+    border: solid rgb(52, 209, 32);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.bcglines{
+    border: none;
+    background-attachment: local;
+    background-image: linear-gradient(to right, white 10px, transparent 10px),
+    linear-gradient(to left, white 10px, transparent 10px),
+    repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+    line-height: 31px;
+    padding: 8px 10px;
+}
+
+
+@media screen and (max-width:500px) {
+     body {
+         background-size: 100% 100%;
+     }
+    .col-8 {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .col-4 {
+        width: 100%;
+    }
+
+    .col-2 {
+        width: 90px;
+    }
+    #btn{
+        margin: 0; 
+    }
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

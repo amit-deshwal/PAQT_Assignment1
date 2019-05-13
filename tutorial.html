@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Voting Tutorial</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/temp.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" alt="Quantiphi logo" src="assets/img/logo.png">
+    </header>
+    <div class="wrapper">
+        <p>Would you like a tutorial on how the system works?</p>
+        <button class="btn" id="button1">Yes, i'd like that</button>
+        <button class="btn" id="button2">No, i can start</button>
+    </div>
+<script type="text/javascript">
+    document.getElementById("button2").onclick = function () {
+        location.href = "voting.html";
+    };
+    document.getElementById("button1").onclick = function () {
+    location.href = "#";
+    };
+</script>
+
+</body>
+
+</html>

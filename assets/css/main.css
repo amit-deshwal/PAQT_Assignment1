@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'marlowe-webfont';
+    src: url('fonts/marlowe-webfont.woff');
+}
+
+body {
+    margin: 0;
+    font-family: 'marlowe-webfont', Arial, Helvetica, sans-serif;
+    background-image: url("bcg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 180px;
+
+}
+
+.logo {
+    width: 220px;
+    height: 53px;
+}
+
+#p1 {
+    text-align: center;
+    font-size: 75px;
+    letter-spacing: 3px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+#p2 {
+    font-size: 25px;
+    position: absolute;
+    text-align: center;
+    height: 18px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.btn {
+    padding: 10px 30px 10px 30px;
+    background-color: #28b585;
+    border-color: #28b585;
+    color: white;
+    letter-spacing: 0.9px;
+    font-size: 1em;
+    border: 2px solid transparent;
+    box-shadow: 7px 9px 13px 6px rgba(34, 41, 37, 0.3);
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 700px) {
+
+    #p1 {
+        font-size: 35px;
+    }
+    .btn{
+        font-size: 13px;
+    }
+    #p2{
+        font-size: 20px;
+        height: 40px;
+    }
+    body{
+        background-size: 100% 100%;
+    }
+    .perspective-container{
+        margin-left: 190px;
+        margin-right: 0;
+        perspective: 800px;
+        bottom: 0%;
+        
+}
+
+}
